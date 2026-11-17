@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Research · Alex Morgan</title>
-<meta name="description" content="Research areas and projects of Alex Morgan.">
+<title>Research · Hiep Ha</title>
+<meta name="description" content="Research areas and projects of Hiep Ha: graph models for time series, uncertainty quantification, explainable analysis.">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/site.css">
 <script src="js/theme.js"></script>
@@ -16,8 +16,7 @@
 <body>
 
 <nav class="nav" aria-label="Main">
-  <!-- EDIT: your name; links back to the home page -->
-  <a class="nav-name" href="index.html">Alex Morgan</a>
+  <a class="nav-name" href="index.html">Hiep Ha</a>
   <a href="about.html">About</a>
   <a href="research.html" aria-current="page">Research</a>
   <a href="work.html">Work</a>
@@ -27,51 +26,34 @@
   <header class="page-head">
     <h1>Research</h1>
     <hr class="short-rule">
-    <p>A short paragraph on the through-line connecting your projects — the problem you keep coming back to.</p>
+    <p>I am interested in models for data that has structure, and in knowing how far their outputs can be trusted. The work below moves between graphs, time series and uncertainty estimation.</p>
   </header>
 
   <!-- ============ PROJECTS ============ -->
   <section class="section flush-top" aria-label="Research areas">
     <div class="wrap">
-      <!-- Each .chapter is one area or project. Copy a block to add one; any number works. -->
       <div class="chapters">
         <article class="chapter">
-          <!-- Optional figure: a plot, photo, diagram or screenshot. Delete the <figure> block to go text-only. -->
-          <figure class="figure">
-            <img src="images/figure-placeholder.svg" alt="" width="800" height="450">
-            <figcaption>Figure 1. One-line caption saying what the reader is looking at.</figcaption>
-          </figure>
-          <p class="when">Area one · 2022 – now</p>
-          <h2>Project or research area one</h2>
-          <p>Two or three sentences: the question you ask, the approach you take, and what you found or expect to find.</p>
-          <div class="tags"><span class="tag">Method</span><span class="tag">Topic</span></div>
-          <div class="links"><a href="work.html">Paper</a><a href="https://github.com/">Code</a></div>
+          <p class="when">Graph models for time series</p>
+          <h2>Forecasting return intervals for a network of stocks</h2>
+          <p>Can a graph over stocks help forecast the next week's minimum and maximum return? I compared six temporal and graph models on 26 equities, with stocks as nodes and edges from return correlations, over 9 leakage-aware folds. A CNN-LSTM won with a mean interval MAE of 0.0222, 12.8% below the Temporal GCN baseline, so in this setting the graph did not beat the simpler model.</p>
+          <div class="tags"><span class="tag">PyTorch</span><span class="tag">Temporal GCN</span><span class="tag">CNN-LSTM</span></div>
+          <div class="links"><a href="https://github.com/hhiep1504/Stock-Return-Prediction">Code</a></div>
         </article>
 
         <article class="chapter">
-          <!-- Optional figure: a plot, photo, diagram or screenshot. Delete the <figure> block to go text-only. -->
-          <figure class="figure">
-            <img src="images/figure-placeholder.svg" alt="" width="800" height="450">
-            <figcaption>Figure 2. One-line caption saying what the reader is looking at.</figcaption>
-          </figure>
-          <p class="when">Area two · 2020 – 2022</p>
-          <h2>Project or research area two</h2>
-          <p>Two or three sentences: the question you ask, the approach you take, and what you found or expect to find.</p>
-          <div class="tags"><span class="tag">Method</span><span class="tag">Topic</span></div>
-          <div class="links"><a href="work.html">Paper</a><a href="https://example.com/">Data</a></div>
+          <p class="when">Uncertainty quantification</p>
+          <h2>Stochastic ensembles of physics-informed neural networks</h2>
+          <p>Standard physics-informed networks give a single answer that degrades under noisy data. With colleagues at the HUST Computer Vision Lab I co-developed an ensemble that combines bagging with Monte Carlo dropout, and I implemented the code and wrote the first draft. Under impulse noise on the wave equation it cut MAE by 15% and prediction-interval width by about 80% against a standard PINN.</p>
+          <div class="tags"><span class="tag">PINNs</span><span class="tag">Bagging</span><span class="tag">MC dropout</span></div>
+          <div class="links"><a href="https://doi.org/10.32604/cmes.2026.080808">Paper</a></div>
         </article>
 
         <article class="chapter">
-          <!-- Optional figure: a plot, photo, diagram or screenshot. Delete the <figure> block to go text-only. -->
-          <figure class="figure">
-            <img src="images/figure-placeholder.svg" alt="" width="800" height="450">
-            <figcaption>Figure 3. One-line caption saying what the reader is looking at.</figcaption>
-          </figure>
-          <p class="when">Area three · 2018 – 2020</p>
-          <h2>Project or research area three</h2>
-          <p>Two or three sentences: the question you ask, the approach you take, and what you found or expect to find.</p>
-          <div class="tags"><span class="tag">Method</span><span class="tag">Topic</span></div>
-          <div class="links"><a href="work.html">Paper</a></div>
+          <p class="when">Explainable analysis on networks</p>
+          <h2>Trade networks and adult obesity</h2>
+          <p>Does the structure of a country's food-trade network explain adult obesity beyond its domestic conditions? Using a panel of 169 countries from 2011 to 2024, I added network features such as supplier concentration and benchmarked 12 models. A five-seed MLP ensemble cut MAE from 8.16 to 2.10 percentage points against a context-only model, and still gave 32% lower MAE on unseen countries under nested country-blocked validation. Models are explained with SHAP, and findings are framed as association, not cause.</p>
+          <div class="tags"><span class="tag">MLP ensembles</span><span class="tag">SHAP</span><span class="tag">Graph features</span></div>
         </article>
       </div>
     </div>
@@ -84,10 +66,12 @@
         <h2 id="tools-h">Methods &amp; tools</h2>
         <hr class="short-rule">
       </div>
-      <!-- Instruments, languages, datasets, theoretical frameworks — whatever your field counts as a toolkit -->
       <div class="tags" style="justify-content:center">
-        <span class="tag">Tool one</span><span class="tag">Tool two</span><span class="tag">Method three</span>
-        <span class="tag">Framework four</span><span class="tag">Dataset five</span><span class="tag">Language six</span>
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">scikit-learn</span>
+        <span class="tag">Graph neural networks</span><span class="tag">LSTMs</span><span class="tag">Time-series forecasting</span>
+        <span class="tag">SHAP</span><span class="tag">SQL</span><span class="tag">R</span>
+        <span class="tag">PySpark</span><span class="tag">MLflow</span><span class="tag">Azure Databricks</span>
+        <span class="tag">Docker</span>
       </div>
     </div>
   </section>
@@ -99,16 +83,16 @@
         <h2 id="collab-h">Work with me</h2>
         <hr class="short-rule">
       </div>
-      <p class="prose">Say what you're open to — joint projects, student supervision, data sharing, advisory work.</p>
+      <p class="prose">I am looking for research roles and PhD opportunities in graph-based and uncertainty-aware modelling of time series.</p>
       <div class="btn-row">
-        <a class="btn" href="mailto:you@university.edu">Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/hiep-ha-hoang-3296a41b4/">Get in touch</a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <a href="index.html">© 2026 Alex Morgan</a>
+  <a href="index.html">© 2026 Hiep Ha</a>
   <button type="button" class="toggle" data-theme-toggle aria-pressed="false"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 1.5a6.5 6.5 0 0 0 0 13z" fill="currentColor"/></svg><span data-theme-label>Dark</span></button>
   <a href="https://github.com/tuannguyen8390/sciencefolio" rel="noopener">Built with Sciencefolio</a>
 </footer>
