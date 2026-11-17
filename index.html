@@ -1,0 +1,117 @@
+<!doctype html>
+<!-- Type pack (grotesk or serif) is set once, in js/theme.js. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hiep Ha · Data science &amp; machine learning</title>
+<meta name="description" content="Academic homepage of Hiep Ha — graph-based and uncertainty-aware machine learning for time series and spatio-temporal data. MSc Data Science, University of York.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/theme.js"></script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <a href="about.html">About</a>
+  <a href="research.html">Research</a>
+  <a href="work.html">Work</a>
+</nav>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <h1>Hiep Ha</h1>
+    <p class="kicker">Data science &amp; machine learning · London</p>
+    <hr class="short-rule">
+    <p class="statement">I build machine-learning models for time series and networks <strong>and test how far their predictions can be trusted.</strong></p>
+    <ul class="profile-links">
+      <li><a href="https://github.com/hhiep1504">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/hiep-ha-hoang-3296a41b4/">LinkedIn</a></li>
+    </ul>
+  </header>
+
+  <!-- ============ WHAT I WORK ON ============ -->
+  <section class="section" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="work-h">What I work on</h2>
+        <hr class="short-rule">
+      </div>
+      <div class="cols3">
+        <article class="col">
+          <h3>Spatio-temporal graph learning</h3>
+          <p>Graph neural networks and GNN–LSTM hybrids for time series where entities influence each other, such as stocks linked by return correlation or countries linked by trade.</p>
+          <div class="tags"><span class="tag">GNN</span><span class="tag">Time series</span></div>
+        </article>
+        <article class="col">
+          <h3>Uncertainty quantification</h3>
+          <p>Ensembles and Monte Carlo dropout that give prediction intervals, so a forecast says how wrong it might be as well as what it predicts.</p>
+          <div class="tags"><span class="tag">Ensembles</span><span class="tag">MC dropout</span><span class="tag">PINNs</span></div>
+        </article>
+        <article class="col">
+          <h3>Explainable, data-driven analysis</h3>
+          <p>Ablation designs and SHAP to ask which groups of features carry predictive signal, with results framed as association rather than causation.</p>
+          <div class="tags"><span class="tag">SHAP</span><span class="tag">Ablation</span><span class="tag">Global health data</span></div>
+        </article>
+      </div>
+      <p class="more"><a href="research.html">All research →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ SELECTED WORK ============ -->
+  <section class="section tint" aria-labelledby="sel-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="sel-h">Selected work</h2>
+        <hr class="short-rule">
+      </div>
+      <div class="entries">
+        <article class="entry">
+          <p class="when">2026 · Thesis</p>
+          <h3><a href="work.html">Food systems, trade networks and adult obesity</a></h3>
+          <p>MSc dissertation, University of York</p>
+        </article>
+        <article class="entry">
+          <p class="when">2026 · Paper</p>
+          <h3><a href="work.html">A Stochastic Ensemble Physics-Informed Neural Networks via Bagging and Monte Carlo Dropout</a></h3>
+          <p>Computer Modeling in Engineering &amp; Sciences</p>
+        </article>
+        <article class="entry">
+          <p class="when">2025 · Paper</p>
+          <h3><a href="work.html">Real-Time Person Re-Identification and Tracking on Edge Devices with Distributed Optimization</a></h3>
+          <p>Pattern Analysis and Applications</p>
+        </article>
+      </div>
+      <p class="more"><a href="work.html">All work →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact" aria-labelledby="contact-h">
+    <div class="wrap" style="text-align:center">
+      <div class="section-head" style="margin-bottom:20px">
+        <h2 id="contact-h">Get in touch</h2>
+        <hr class="short-rule">
+      </div>
+      <p class="prose">I am looking for research roles and PhD opportunities on graph-based and uncertainty-aware models for time series. The best way to reach me is LinkedIn.</p>
+      <div class="btn-row">
+        <a class="btn" href="https://www.linkedin.com/in/hiep-ha-hoang-3296a41b4/">LinkedIn</a>
+        <a class="btn btn-line" href="https://github.com/hhiep1504">GitHub</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <a href="index.html">© 2026 Hiep Ha</a>
+  <button type="button" class="toggle" data-theme-toggle aria-pressed="false"><svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 1.5a6.5 6.5 0 0 0 0 13z" fill="currentColor"/></svg><span data-theme-label>Dark</span></button>
+  <a href="https://github.com/tuannguyen8390/sciencefolio" rel="noopener">Built with Sciencefolio</a>
+</footer>
+
+</body>
+</html>
